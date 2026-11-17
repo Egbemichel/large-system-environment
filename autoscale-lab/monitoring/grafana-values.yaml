@@ -1,0 +1,34 @@
+# Grafana for the demonstration (chart grafana/grafana, installed by Terraform when
+# enable_grafana=true). Lab credentials only; the cluster is local.
+adminUser: admin
+adminPassword: autoscale
+persistence:
+  enabled: false
+service:
+  type: NodePort
+  nodePort: 30300
+resources:
+  requests:
+    cpu: 50m
+    memory: 128Mi
+  limits:
+    memory: 256Mi
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+      - name: Prometheus
+        type: prometheus
+        access: proxy
+        url: http://prometheus-server.monitoring.svc.cluster.local:80
+        isDefault: true
+dashboardProviders:
+  dashboardproviders.yaml:
+    apiVersion: 1
+    providers:
+      - name: default
+        folder: Autoscale Lab
+        type: file
+        disableDeletion: true
+        options:
+          path: /var/lib/grafana/dashboards/default

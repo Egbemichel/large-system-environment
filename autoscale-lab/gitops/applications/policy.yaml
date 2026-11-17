@@ -1,0 +1,20 @@
+# Argo CD Application: the active scaling policy. gitops/active/ holds exactly one policy
+# manifest, so changing the policy is a Git commit (scripts/gitops-switch.sh).
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: scaling-policy
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Egbemichel/large-system-environment.git
+    targetRevision: main
+    path: autoscale-lab/gitops/active
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

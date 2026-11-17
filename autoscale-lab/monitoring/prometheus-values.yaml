@@ -1,0 +1,31 @@
+# Minimal Prometheus for the lab (chart prometheus-community/prometheus, installed by Terraform).
+# Pods are found through Kubernetes service discovery on the app=workload label.
+alertmanager:
+  enabled: false
+prometheus-pushgateway:
+  enabled: false
+prometheus-node-exporter:
+  enabled: false
+kube-state-metrics:
+  enabled: false
+server:
+  global:
+    scrape_interval: 5s
+    scrape_timeout: 4s
+  persistentVolume:
+    enabled: false
+  service:
+    servicePort: 80
+extraScrapeConfigs: |
+  - job_name: workload
+    kubernetes_sd_configs:
+      - role: pod
+    relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_label_app]
+        regex: workload
+        action: keep
+      - source_labels: [__meta_kubernetes_pod_ip]
+        target_label: __address__
+        replacement: $1:8080
+      - source_labels: [__meta_kubernetes_pod_name]
+        target_label: pod

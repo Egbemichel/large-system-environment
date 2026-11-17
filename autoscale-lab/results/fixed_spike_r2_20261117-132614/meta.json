@@ -1,0 +1,2 @@
+{"policy":"fixed","pattern":"spike","chaos":false,"rep":2,
+ "settle_s":30,"observe_s":90,"fixed_replicas":4}

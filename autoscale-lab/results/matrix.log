@@ -1,0 +1,124 @@
+=== repeat 1, order: 8 4 2 11 14 7 1 6 9 13 12 5 0 3 15 10
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[11:31:31] keda steady rep 1: settling for 30s
+[11:36:34] saved results/keda_steady_r1_20261117-113201
+[11:36:35] hpa steady rep 1: settling for 30s
+[11:41:37] saved results/hpa_steady_r1_20261117-113706
+[11:42:14] fixed spike rep 1: settling for 30s
+[11:48:45] saved results/fixed_spike_r1_20261117-114244
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[11:49:20] keda spike chaos rep 1: settling for 30s
+[11:55:42] saved results/keda_spike_chaos_r1_20261117-114950
+[11:56:16] predictive spike rep 1: settling for 30s
+[12:02:38] saved results/predictive_spike_r1_20261117-115646
+[12:03:13] hpa spike chaos rep 1: settling for 30s
+[12:09:35] saved results/hpa_spike_chaos_r1_20261117-120343
+[12:10:12] fixed ramp rep 1: settling for 30s
+[12:17:24] saved results/fixed_ramp_r1_20261117-121042
+[12:18:00] hpa spike rep 1: settling for 30s
+[12:24:22] saved results/hpa_spike_r1_20261117-121830
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[12:24:58] keda ramp rep 1: settling for 30s
+[12:32:00] saved results/keda_ramp_r1_20261117-122528
+[12:32:03] predictive ramp rep 1: settling for 30s
+[12:39:04] saved results/predictive_ramp_r1_20261117-123233
+[12:39:12] predictive steady rep 1: settling for 30s
+[12:44:15] saved results/predictive_steady_r1_20261117-123942
+[12:44:31] hpa ramp rep 1: settling for 30s
+[12:51:33] saved results/hpa_ramp_r1_20261117-124502
+[12:52:08] fixed steady rep 1: settling for 30s
+[12:57:10] saved results/fixed_steady_r1_20261117-125238
+[12:57:48] fixed spike chaos rep 1: settling for 30s
+[13:04:19] saved results/fixed_spike_chaos_r1_20261117-125818
+[13:04:53] predictive spike chaos rep 1: settling for 30s
+[13:11:15] saved results/predictive_spike_chaos_r1_20261117-130523
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[13:11:49] keda spike rep 1: settling for 30s
+[13:18:10] saved results/keda_spike_r1_20261117-131219
+=== repeat 2, order: 6 2 9 15 8 11 13 7 3 0 4 1 10 5 14 12
+[13:18:44] hpa spike rep 2: settling for 30s
+[13:25:05] saved results/hpa_spike_r2_20261117-131914
+[13:25:44] fixed spike rep 2: settling for 30s
+[13:32:15] saved results/fixed_spike_r2_20261117-132614
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[13:32:49] keda ramp rep 2: settling for 30s
+[13:39:52] saved results/keda_ramp_r2_20261117-133319
+[13:40:08] predictive spike chaos rep 2: settling for 30s
+[13:46:29] saved results/predictive_spike_chaos_r2_20261117-134038
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[13:47:03] keda steady rep 2: settling for 30s
+[13:52:05] saved results/keda_steady_r2_20261117-134733
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[13:52:07] keda spike chaos rep 2: settling for 30s
+[13:58:31] saved results/keda_spike_chaos_r2_20261117-135237
+[13:59:04] predictive ramp rep 2: settling for 30s
+[14:06:06] saved results/predictive_ramp_r2_20261117-135934
+[14:06:16] hpa spike chaos rep 2: settling for 30s
+[14:12:47] saved results/hpa_spike_chaos_r2_20261117-140646
+[14:13:27] fixed spike chaos rep 2: settling for 30s
+[14:19:58] saved results/fixed_spike_chaos_r2_20261117-141357
+[14:20:38] fixed steady rep 2: settling for 30s
+[14:25:40] saved results/fixed_steady_r2_20261117-142108
+[14:26:13] hpa steady rep 2: settling for 30s
+[14:31:15] saved results/hpa_steady_r2_20261117-142643
+[14:31:51] fixed ramp rep 2: settling for 30s
+[14:49:04] saved results/fixed_ramp_r2_20261117-143222
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[14:49:39] keda spike rep 2: settling for 30s
+[14:56:00] saved results/keda_spike_r2_20261117-145009
+[14:56:36] hpa ramp rep 2: settling for 30s
+[15:03:37] saved results/hpa_ramp_r2_20261117-145707
+[15:03:55] predictive spike rep 2: settling for 30s
+[15:10:16] saved results/predictive_spike_r2_20261117-150425
+[15:10:43] predictive steady rep 2: settling for 30s
+[15:15:45] saved results/predictive_steady_r2_20261117-151113
+=== repeat 3, order: 0 15 11 9 12 13 1 10 7 8 4 5 14 6 2 3
+[15:16:19] fixed steady rep 3: settling for 30s
+[17:36:51] saved results/fixed_steady_r3_20261117-151649
+[17:37:27] predictive spike chaos rep 3: settling for 30s
+[17:43:48] saved results/predictive_spike_chaos_r3_20261117-173757
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[17:44:14] keda spike chaos rep 3: settling for 30s
+[17:50:35] saved results/keda_spike_chaos_r3_20261117-174444
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[17:51:10] keda ramp rep 3: settling for 30s
+[17:58:11] saved results/keda_ramp_r3_20261117-175140
+[17:58:14] predictive steady rep 3: settling for 30s
+[18:51:56] saved results/predictive_steady_r3_20261117-175844
+[18:52:05] predictive ramp rep 3: settling for 30s
+[18:59:08] saved results/predictive_ramp_r3_20261117-185235
+[18:59:44] fixed ramp rep 3: settling for 30s
+[19:06:55] saved results/fixed_ramp_r3_20261117-190014
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[19:07:31] keda spike rep 3: settling for 30s
+[19:13:53] saved results/keda_spike_r3_20261117-190801
+[19:14:28] hpa spike chaos rep 3: settling for 30s
+[19:21:00] saved results/hpa_spike_chaos_r3_20261117-191458
+Warning: PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+Warning: CooldownPeriod is configured but is not relevant. CooldownPeriod is only relevant when minReplicaCount = 0 or idleReplicaCount is set
+[19:21:34] keda steady rep 3: settling for 30s
+[19:26:36] saved results/keda_steady_r3_20261117-192204
+[19:26:39] hpa steady rep 3: settling for 30s
+[19:31:41] saved results/hpa_steady_r3_20261117-192709
+[19:31:58] hpa ramp rep 3: settling for 30s
+[19:39:00] saved results/hpa_ramp_r3_20261117-193229
+[19:39:37] predictive spike rep 3: settling for 30s
+[19:45:58] saved results/predictive_spike_r3_20261117-194007
+[19:46:28] hpa spike rep 3: settling for 30s
+[19:52:50] saved results/hpa_spike_r3_20261117-194658
+[19:53:30] fixed spike rep 3: settling for 30s
+[20:00:04] saved results/fixed_spike_r3_20261117-195400
+[20:00:43] fixed spike chaos rep 3: settling for 30s
+[20:07:16] saved results/fixed_spike_chaos_r3_20261117-200113
+48 runs, 16 configurations. Wrote summary.csv, summary_runs.csv, summary_table.md and plots in results\plots/

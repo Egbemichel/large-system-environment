@@ -1,0 +1,70 @@
+# Predictive policy: a small controller that forecasts the request rate and sets the
+# replica count of the workload Deployment. See predictor/predictor.py.
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: predictor
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: predictor
+rules:
+  - apiGroups: ["apps"]
+    resources: ["deployments"]
+    resourceNames: ["workload"]
+    verbs: ["get"]
+  - apiGroups: ["apps"]
+    resources: ["deployments/scale"]
+    resourceNames: ["workload"]
+    verbs: ["get", "patch", "update"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: predictor
+subjects:
+  - kind: ServiceAccount
+    name: predictor
+roleRef:
+  kind: Role
+  name: predictor
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: predictor
+  labels:
+    app: predictor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: predictor
+  template:
+    metadata:
+      labels:
+        app: predictor
+    spec:
+      serviceAccountName: predictor
+      containers:
+        - name: predictor
+          image: predictor:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: TARGET_PER_POD
+              value: "3"
+            - name: MIN_REPLICAS
+              value: "2"
+            - name: MAX_REPLICAS
+              value: "12"
+            - name: HORIZON
+              value: "20"
+          resources:
+            requests:
+              cpu: 20m
+              memory: 32Mi
+            limits:
+              cpu: 100m
+              memory: 64Mi

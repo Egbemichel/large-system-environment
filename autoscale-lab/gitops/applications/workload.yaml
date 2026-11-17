@@ -1,0 +1,19 @@
+# Argo CD Application: the workload Deployment and Service, taken from Git.
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: workload
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Egbemichel/large-system-environment.git
+    targetRevision: main
+    path: autoscale-lab/k8s/base
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

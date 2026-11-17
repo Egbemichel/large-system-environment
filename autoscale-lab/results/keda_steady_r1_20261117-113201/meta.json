@@ -1,0 +1,2 @@
+{"policy":"keda","pattern":"steady","chaos":false,"rep":1,
+ "settle_s":30,"observe_s":90,"fixed_replicas":4}

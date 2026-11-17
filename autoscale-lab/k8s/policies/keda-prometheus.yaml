@@ -1,0 +1,40 @@
+# Custom-metric policy: scale on requests per second measured by Prometheus.
+# Needs KEDA and Prometheus (see infra/terraform).
+# The actuation limits below are identical to the ones in hpa-cpu.yaml, so only the
+# scaling signal differs between the two policies.
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: workload-keda
+spec:
+  scaleTargetRef:
+    name: workload
+  minReplicaCount: 2
+  maxReplicaCount: 12
+  pollingInterval: 5
+  cooldownPeriod: 60
+  advanced:
+    horizontalPodAutoscalerConfig:
+      behavior:
+        scaleUp:
+          stabilizationWindowSeconds: 0
+          selectPolicy: Max
+          policies:
+            - type: Percent
+              value: 100
+              periodSeconds: 15
+            - type: Pods
+              value: 4
+              periodSeconds: 15
+        scaleDown:
+          stabilizationWindowSeconds: 60
+          policies:
+            - type: Pods
+              value: 2
+              periodSeconds: 30
+  triggers:
+    - type: prometheus
+      metadata:
+        serverAddress: http://prometheus-server.monitoring.svc.cluster.local:80
+        query: sum(rate(app_requests_total[15s]))
+        threshold: "3"   # about 3 requests/s per replica (60% of one pod's capacity)

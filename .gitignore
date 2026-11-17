@@ -1,0 +1,12 @@
+# local state and large raw data
+autoscale-lab/infra/terraform/.terraform/
+autoscale-lab/infra/terraform/*.tfstate*
+autoscale-lab/infra/terraform/kubeconfig.yaml
+autoscale-lab/results/**/k6-raw.csv
+autoscale-lab/results/setup.log
+# private working notes
+notes/
+*.pyc
+__pycache__/
+autoscale-lab/results/demo-setup.log
+autoscale-lab/results/rerun.log

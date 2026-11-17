@@ -1,0 +1,6 @@
+1794933945 CHAOS round 1 killing: pod/workload-67c4f7f9c6-74c6t
+pod "workload-67c4f7f9c6-74c6t" deleted from default namespace
+1794933986 CHAOS round 2 killing: pod/workload-67c4f7f9c6-x5wjz
+pod "workload-67c4f7f9c6-x5wjz" deleted from default namespace
+1794934027 CHAOS round 3 killing: pod/workload-67c4f7f9c6-rc4rk
+pod "workload-67c4f7f9c6-rc4rk" deleted from default namespace
